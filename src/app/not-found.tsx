@@ -1,19 +1,21 @@
-import URLFromInput from '@/shared/components/URLFromInput';
+import Link from 'next/link';
 
-export default async function Home()
+export default async function NotFound()
 {
 	return (
 		<main className={ 'flex flex-col justify-center gap-4 h-dvh' }>
 			<div className={ 'text-center' }>
 				<h1 className="mb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
-					Fast. <mark className="px-2 text-white bg-red-500 rounded">Simple.</mark> URL Shortener.
+					404. <mark className="px-2 text-white bg-red-500 rounded">Not Found.</mark>
 				</h1>
 				<p className="md:text-lg lg:text-xl font-normal text-gray-500">
-					Shorten your long URLs with a single click.
+					The page you are looking for does not exist.
 				</p>
-			</div>
 
-			<URLFromInput/>
+				<Link href={ '/' } className="text-blue-500 hover:underline">
+					Go back to the home page
+				</Link>
+			</div>
 		</main>
 	);
 }

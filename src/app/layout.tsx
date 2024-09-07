@@ -1,6 +1,8 @@
-import type { Metadata } from 'next';
-import { Source_Sans_3 } from 'next/font/google';
-import React             from 'react';
+import type { Metadata }    from 'next';
+import { Source_Sans_3 }    from 'next/font/google';
+import React                from 'react';
+
+import ErrorContextProvider from '@/shared/context/errorContext';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -21,7 +23,9 @@ export default function RootLayout
 	return (
 		<html lang="en">
 		<body className={ FONT.className }>
-		{ children }
+		<ErrorContextProvider>
+			{ children }
+		</ErrorContextProvider>
 		</body>
 		</html>
 	);
