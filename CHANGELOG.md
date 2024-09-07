@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/tory1103/url-shortener/compare/v1.1.0...v1.2.0) (2024-09-07)
+
+
+### Features
+
+* adds browser extension support ([40bfb5a](https://github.com/tory1103/url-shortener/commit/40bfb5ac678448a1ca8037bbd3dedf777a05ca0c))
+
 # [1.1.0](https://github.com/tory1103/url-shortener/compare/v1.0.0...v1.1.0) (2024-09-07)
 
 
