@@ -1,0 +1,12 @@
+{
+	"manifest_version": 3,
+	"name": "Simple URL Shortener",
+	"version": "1.0",
+	"description": "Shorten your long URLs with a single click.",
+	"action": {
+		"default_popup": "index.html"
+	},
+	"permissions": [
+		"activeTab"
+	]
+}
