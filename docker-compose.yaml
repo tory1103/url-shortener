@@ -1,0 +1,45 @@
+networks:
+  internalNetwork:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.30.0.0/24"
+
+services:
+  redis:
+    image: redis:7.4.0
+
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+
+    volumes:
+      - ./out/redis:/data
+
+    networks:
+      internalNetwork:
+        ipv4_address: 172.30.0.2
+
+    ports:
+      - "6379:6379"
+
+    healthcheck:
+      test: [ 'CMD', 'redis-cli', 'ping' ]
+      timeout: 20s
+      retries: 10
+
+    restart: always
+
+  nodejs:
+    build: .
+
+    ports:
+      - "3000:3000"
+
+    networks:
+      internalNetwork:
+        ipv4_address: 172.30.0.10
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    restart: always
