@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/tory1103/url-shortener/compare/v1.2.0...v1.2.1) (2024-09-11)
+
+
+### Bug Fixes
+
+* adds server side URL validation ([fe4876b](https://github.com/tory1103/url-shortener/commit/fe4876bbdfabd94cbae59506723a02434fa30445))
+
 # [1.2.0](https://github.com/tory1103/url-shortener/compare/v1.1.0...v1.2.0) (2024-09-07)
 
 
