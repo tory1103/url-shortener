@@ -1,14 +1,14 @@
 'use server';
 
 import { hash }              from 'bcrypt';
-import { isURL }             from 'validator';
 
 import { RedisCacheService } from '@/shared/lib/redis';
 import { exists }            from '@/shared/lib/redis/commands/verify';
+import isNotValidURL         from '@/shared/lib/validators/isNotValidURL';
 
 export default async function createShortUrl( url: string )
 {
-	if ( !isURL( url ) ) return ':)'; // Someone tried to break the system by sending a non-URL string.
+	if ( isNotValidURL( url ) ) return ':)'; // Someone tried to break the system by sending a non-URL string.
 
 	let
 		urlHash       = url,

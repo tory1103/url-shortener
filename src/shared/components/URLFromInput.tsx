@@ -5,11 +5,11 @@ import {
 	LinkIcon
 }                          from '@heroicons/react/24/outline';
 import { useState }        from 'react';
-import { isURL }           from 'validator';
 
 import createShortUrl      from '@/shared/actions/createShortUrl';
 import ErrorsContainer     from '@/shared/components/ErrorsContainer';
 import { useErrorContext } from '@/shared/context/errorContext';
+import isNotValidURL       from '@/shared/lib/validators/isNotValidURL';
 
 export default function URLFromInput()
 {
@@ -59,7 +59,7 @@ export default function URLFromInput()
 				<button
 					type={ 'submit' }
 					className={ 'bg-red-500 text-white font-bold py-2 px-4 rounded-lg disabled:opacity-75' }
-					disabled={ !isURL( url ) }
+					disabled={ isNotValidURL( url ) }
 				>
 					<ArrowTurnDownLeftIcon className={ 'size-5' }/>
 				</button>
