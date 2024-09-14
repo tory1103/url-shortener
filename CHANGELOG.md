@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/tory1103/url-shortener/compare/v1.2.1...v1.3.0) (2024-09-14)
+
+
+### Features
+
+* updates URL validation to avoid large URL sizes ([7d9eea7](https://github.com/tory1103/url-shortener/commit/7d9eea71a5786159af5a0c147123bb8f556a2146))
+
 ## [1.2.1](https://github.com/tory1103/url-shortener/compare/v1.2.0...v1.2.1) (2024-09-11)
 
 
